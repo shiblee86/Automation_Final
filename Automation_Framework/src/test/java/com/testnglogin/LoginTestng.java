@@ -4,9 +4,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.extentreport.BaseExtentReport;
 import com.generic.library.BaseGCRLogin;
 
-public class LoginTestng {
+public class LoginTestng extends BaseExtentReport{
 	
 
 	BaseGCRLogin obj = new BaseGCRLogin();

@@ -5,27 +5,25 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import com.loginpfmaster.LoginPageFactory;
+import com.masterpagefactory.LoginPageFactory;
 import com.util.Highlighter;
 import com.util.screenShot;
 
 public class BaseGCRLogin {
 
-	WebDriver driver ;
-	LoginPageFactory pf ;
-
+	WebDriver driver;
+	LoginPageFactory pf;
 	Highlighter color;
-	
-	
+
 	public void getsetup() {
+
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
-		
-		 driver = new ChromeDriver();
-		 pf = PageFactory.initElements(driver, LoginPageFactory.class);
-		 color = new Highlighter(driver); 
+		driver = new ChromeDriver();
+		pf = PageFactory.initElements(driver, LoginPageFactory.class);
+		color = new Highlighter(driver);
 		driver.get(pf.getURL());
 		driver.manage().window().maximize();
-		
+
 	}
 
 	public void gcrLogin() {
@@ -56,7 +54,7 @@ public class BaseGCRLogin {
 
 		// validation or assert in selenium
 
-		Assert.assertEquals("My Account Information",pf.getMyaccountinformation().getText());
+		Assert.assertEquals("My Account Information", pf.getMyaccountinformation().getText());
 
 	}
 

@@ -6,6 +6,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +19,6 @@ public class screenShot {
 		TakesScreenshot ts =(TakesScreenshot)driver;
 		File source=ts.getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
-		System.out.println(currentDir);
 	File file = new File(currentDir+"\\ScreenShots");
 		
 		if(!file.exists()) {
@@ -38,7 +38,7 @@ public class screenShot {
 		
 		
 		try {
-			FileHandler.copy(source, new File(destination));
+			FileUtils.copyFile(source, new File(destination));
 		} catch (IOException e) {
 		
 			e.printStackTrace();
@@ -50,23 +50,9 @@ public class screenShot {
 	
 	      }
 
-	private static void FileHandler(File source, File file) {
-		// TODO Auto-generated method stub
-		
-	}
 
 
-	/*  public void failed(Throwable e, Description test,WebDriver driver){
-	 
-	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-     String currentDir = System.getProperty("user.dir");
-     String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-     try {
-         FileUtils.copyFile(scrFile, new File(currentDir + "\\screenshots\\" + test.getMethodName() + timeStamp + ".png"));
-     } catch (IOException e1) {
-         e1.printStackTrace();
-}*/
-     
+
 
 	  
 }	

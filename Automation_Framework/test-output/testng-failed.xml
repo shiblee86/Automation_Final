@@ -5,9 +5,14 @@
     <classes>
       <class name="com.testnglogin.LoginTestng">
         <methods>
+          <include name="gcrLogin"/>
+          <include name="aftermethod"/>
           <include name="loginValidation"/>
           <include name="tearDown"/>
+          <include name="beforesuit"/>
+          <include name="sfterSuite"/>
           <include name="getsetup"/>
+          <include name="beforemethod"/>
         </methods>
       </class> <!-- com.testnglogin.LoginTestng -->
     </classes>
