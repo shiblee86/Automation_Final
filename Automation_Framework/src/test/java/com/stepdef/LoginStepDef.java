@@ -26,7 +26,7 @@ public class LoginStepDef {
 		driver = new ChromeDriver();
 		pf = PageFactory.initElements(driver, LoginPageFactory.class);
 		color = new Highlighter(driver);
-		
+		screenShot.deleteScreenShorFolder();
 		driver.manage().window().maximize();
 
 	    

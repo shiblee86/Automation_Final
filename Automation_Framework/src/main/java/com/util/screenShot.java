@@ -20,15 +20,10 @@ public class screenShot {
 		File source=ts.getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
 	File file = new File(currentDir+"\\ScreenShots");
-		
-		if(!file.exists()) {
-			file.mkdirs();
-			System.out.println("Create folder");
-		}
-		else {
-			file.delete();
-			file.mkdirs();
-		}
+		if (!file.exists()) {
+	    file.mkdir();
+		} 
+
 		DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm");
 		Date date = new Date();
 	  String dateTime = dateFormat.format(date.getTime());
@@ -50,10 +45,22 @@ public class screenShot {
 	
 	      }
 
+	public static void deleteScreenShorFolder() {
+	String currentDir = System.getProperty("user.dir");
+	File file = new File(currentDir+"\\ScreenShots");
+		if (!file.exists()) {
+	    file.mkdir();
+		} 
+		else {
+			
+			String[]entries = file.list();
+			for(String s: entries){
+			    File currentFile = new File(file.getPath(),s);
+			    currentFile.delete();
+			}
 
-
-
-
+		}
+	}
 	  
 }	
 
