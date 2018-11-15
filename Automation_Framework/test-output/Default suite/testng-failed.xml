@@ -3,18 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testnglogin.LoginTestng">
+      <class name="com.runner.TestNgRunner">
         <methods>
-          <include name="gcrLogin"/>
-          <include name="aftermethod"/>
-          <include name="loginValidation"/>
-          <include name="tearDown"/>
-          <include name="beforesuit"/>
-          <include name="sfterSuite"/>
-          <include name="getsetup"/>
-          <include name="beforemethod"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="teardown"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.testnglogin.LoginTestng -->
+      </class> <!-- com.runner.TestNgRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

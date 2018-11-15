@@ -12,26 +12,37 @@ import org.testng.annotations.Test;
 
 public class UnitTesting {
 	@BeforeSuite
-	public void setupSuite() {
+	public void test1() {
 		System.out.println("This is BeforeSuite");
 	}
 
 	@BeforeTest
-	public void setup() {
+	public void test2() {
 		System.out.println("This is BeforeTest");
 	}
 
 	@BeforeClass
-	public void setupClass() {
+	public void test3() {
 		System.out.println("This is BeforeClass");
 	}
 
 	@BeforeMethod
-	public void setupMethod() {
+	public void test4() {
 		System.out.println("This is BeforeMethod");
 	}
 
-	
+	@Test
+	public void test5()  {
+		
+		
+		System.out.println("This is Test");
+		
+		int a=0;
+		int b=100;
+		int c=100/0;
+		System.out.println(c);
+		
+	}
 
 	@AfterMethod
 	public void closeMethod() {
@@ -52,8 +63,5 @@ public class UnitTesting {
 	public void closeSuite() {
 		System.out.println("This is AfterSuite");
 	}
-	@Test
-	public void getsalary() {
-		System.out.println("This is Test");
-	}
+
 }

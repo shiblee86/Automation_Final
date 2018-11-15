@@ -1,10 +1,19 @@
 package com.masterpagefactory;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPageFactory {
 
+	WebDriver driver;
+	
+	public LoginPageFactory(WebDriver driver){
+		this.driver=driver;
+	}
+	
+	
+	
 
 	@FindBy(xpath = "(//*[@class='ui-button-text'])[3]")
 	private WebElement myaccount;

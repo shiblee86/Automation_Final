@@ -17,7 +17,7 @@ Scenario Outline: Successful Login with Valid Credentials
 	Examples:
 		|userName				|password	|
 		|sarowerny@gmail.com	|student 	|
-		|sarowerny@gmail.com	|student	|	
-		
+		|sarowerny@gmail.com	|4242342%$	|	
+		|sarowerny				|eeeee		|	
 		
 	

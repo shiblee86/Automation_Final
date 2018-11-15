@@ -10,10 +10,12 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 public class DragAndDrop {
 	static WebDriver driver ;
-	public static void main(String[] args) throws Exception {
+	@Test
+	public static void setup(){
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		
 		 driver = new ChromeDriver();
@@ -24,7 +26,7 @@ public class DragAndDrop {
 		driver.get("http://jqueryui.com/resources/demos/droppable/default.html");
 		 
 		// Add 5 seconds wait
-		Thread.sleep(5000);
+		
 		 
 		// Create object of actions class
 		Actions act=new Actions(driver);

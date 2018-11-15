@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class Database {
+public class DatabaseList {
 
 	
 	public static ArrayList<String> getDataTableColumn(String SQLqyeries,String columnName) throws Exception {
@@ -23,9 +23,8 @@ public class Database {
 			  columnValue.add( rs.getString(columnName)); 
 		  
 	}
-		 
 
-		System.out.println(columnValue);
+		//System.out.println(columnValue);
 		// step5 close the connection object
 		connection.close();
 		return columnValue;

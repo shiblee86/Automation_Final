@@ -14,10 +14,11 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 	plugin = {"pretty", "html:target","json:target/cucumber.json",
 		"com.cucumber.listener.ExtentCucumberFormatter:target/Cucumber_Extents_report.html"},
 		
-    features = {"src/main/resources/GCRloginScenario.feature"},
-    glue = {"com.stepdef"},
+    features = {"src/main/resources/GCRloginScenarioOutline.feature"},//feature path
+    glue = {"com.stepdef"},//package name
   
-  monochrome=true
+  monochrome=true,
+  dryRun=false
 )
 public class TestNgRunner extends AbstractTestNGCucumberTests {// remove from extends if junit
 	

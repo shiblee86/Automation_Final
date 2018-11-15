@@ -1,4 +1,4 @@
-package com.testnglogin;
+/*package com.testnglogin;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -41,3 +41,4 @@ public class LoginTestng extends BaseExtentReport{
 
 }
 
+*/

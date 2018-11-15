@@ -19,7 +19,8 @@ static WebDriver driver;
 		   
 		 Assert.assertEquals( driver.getTitle(), "UPS home page");
 		   
-		   System.out.println("HELLO JAVA");
+		   
+		 System.out.println("Validation");
 
 	}
 
