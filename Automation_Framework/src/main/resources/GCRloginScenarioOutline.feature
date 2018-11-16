@@ -2,7 +2,7 @@
 Feature: Login function validation 
 
 	Description: User able to login into the application with valid username and password
-
+@TC_2344
 Scenario Outline: Successful Login with Valid Credentials 
 
 	Given User able to open any browser 
